@@ -33,7 +33,7 @@ It highlights API integration, dynamic UI rendering, and component-based archite
 - npm install
 - npm start
 
-The application will run locally at http://localhost:3000 by default. Make sure you have Node.js and npm installed.
+The application will run locally at http://localhost:5137 by default. Make sure you have Node.js and npm installed.
 
 # Contacts
 https://www.linkedin.com/in/kyrylo-popov-ab160536a/
