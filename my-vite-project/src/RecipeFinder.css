@@ -1,0 +1,328 @@
+/*.central-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central-part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.central-part1 input{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.central-part1 button{
+    width: 75px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+.central-part1 button:hover{
+    background-color: lightgray;
+}
+
+.central-part1 button:focus{
+    box-shadow: 0 0 0 0.15rem #258cfb;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: bisque;
+    background: linear-gradient(0deg, bisque, #5C05F1);
+    background-size: cover;
+}
+
+.fgr{
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fgr:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 0 0 0.2rem white, 0 0 0 0.35rem #258cfb;
+}
+
+.divGrid{
+    justify-content: center;
+}
+
+.head{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+.fgcap{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#recipe-details {
+  background: transparent;   /* прозорий фон */
+/*
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  color: #222;               /* текст контрастний */
+/*}*/
+
+:root{
+  --page-gradient: linear-gradient(180deg, bisque 0%, #5C05F1 100%);
+  --container-max: 1200px;
+}
+
+/* ЄДИННИЙ фон для сторінки */
+
+html{
+    min-height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+
+  background-size: cover;
+  margin: 0;
+  background: var(--page-gradient);
+  font-family: system-ui, Arial, sans-serif;
+  color: #111; /* якщо хочеш темний текст — інакше зроби #fff */
+}
+
+/* wrapper — без власного фону */
+.app-wrapper {
+  min-height: 100%; /* щоб фон заповнював висоту */
+}
+
+/* центрований контейнер в межах фонового градієнту */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.head{
+  font-size: 35px;
+  background: linear-gradient(0deg, #111, #258cfb); /* градієнт */
+  -webkit-background-clip: text;  /* обрізати фоном тільки текст */
+  -webkit-text-fill-color: transparent; /* текст прозорий, показує фон */
+}
+
+/* пошук */
+.central-part { text-align: center; }
+.central-part1 {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  padding-bottom: 30px;
+  
+}
+
+.central-part1 input{
+    width: 200px;
+    font-size: 15px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.central-part1 button{
+    width: 75px;
+    height: 26px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color:white;
+    border: none; 
+}
+
+.central-part1 button:hover{
+    background-color: #e68900;
+}
+
+.central-part1 button:focus{
+    box-shadow: 0 0 0 0.15rem #258cfb;
+}
+
+/* сітка карток */
+.divGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  align-items: start;
+  justify-items: center;
+}
+
+/* картка (прозора — щоб не закривати фон) */
+.card {
+  width: 100%;
+  max-width: 250px;
+  cursor: pointer;
+  text-align: center;
+  background: transparent; /* важливо — не повинно бути суцільного білого фону */
+  border-radius: 12px;
+}
+
+.fgr:hover{
+    transform: translateY(-15px);
+}
+
+.fgr img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.fgcap{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+/* секція деталей — без окремого градієнту, як частина тієї самої сторінки */
+.recipe-details {
+  margin-top: 60px;
+  padding: 0 10px;
+  
+}
+.details-body .instructions{
+  font-size: 18px;
+  text-align: justify;
+}
+/* якщо хочеш виділити деталізацію, зроби напівпрозорою карткою */
+.details-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);   /* напівпрозоро — видно фон знизу */
+  color: #fff;                           /* текст контрастний на градієнті */
+  backdrop-filter: blur(6px);            /* розмиття фону під карткою (працює в сучасних браузерах) */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.details-card img { 
+    max-width: 320px; 
+    width: 100%; 
+    display: block; 
+    margin: 12px auto; 
+    border-radius: 8px; 
+    justify-content: center;
+}
+
+.details-card button{
+    border-radius: 5px;
+    background-color: #ff9800;
+    color:white;
+    border: none; 
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.details-card button:hover{
+  background: #e68900;
+}
+
+.details-card button:focus{
+    box-shadow: 0 0 0 0.15rem #258cfb;
+}
+.details-body {
+  margin-top: 20px;
+  text-align: left; /* або justify, якщо хочеш рівномірний текст */
+  line-height: 1.6;
+}
+
+.details-card h3{
+  font-size: 30px;
+  font-style: italic;
+}
+
+.details-card p{
+  font-size: 20px;
+}
+
+.details-card h4{
+  font-size: 20px;
+}
+
+.srch-btn{
+  cursor: pointer;
+}
+
+
+.cart-btn {
+  background: #ff9800;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  margin-bottom: 15px;
+}
+
+.cart-btn:hover {
+  background: #e68900;
+}
+
+.cart-btn:focus {
+  box-shadow: 0 0 0 0.15rem #258cfb;
+}
+/* затемнення фону */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* саме вікно */
+.modal-content {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+.modal-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+.modal-content li span {
+  cursor: pointer;
+  text-decoration: underline;
+}
